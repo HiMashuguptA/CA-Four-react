@@ -15,6 +15,7 @@ export default function HomePage({ setpage }) {
   };
   return (
     <>
+    {/* using conditional rendering */}
     {redirect?(<QuestionPage />):(
       
       <div className="Home">
@@ -31,6 +32,7 @@ export default function HomePage({ setpage }) {
         
             <div className="your-container">
               <div
+              // Hamburger Design
                 className={`hamburger-menu ${isNavOpen ? "open" : ""}`}
                 onClick={toggleNav}
               >
@@ -84,6 +86,7 @@ export default function HomePage({ setpage }) {
                 <p className="sub-name">Get Reacted By React</p>
                 <div className="img-btn">
                   <img src="box-img-1.png" style={{ cursor: "pointer" }} />
+                  {/* Onclicking to frontEnd quiz it should redirect */}
                   <button
                     onClick={FrontEnd}
                     className="sub-btn"
@@ -108,7 +111,9 @@ export default function HomePage({ setpage }) {
                 <p className="sub-name">Get Started With Figma</p>
                 <div className="img-btn">
                   <img src="box-img-2.png" style={{ cursor: "pointer" }} />
-                  <button onClick={()=>{setpage("figma")}} className="sub-btn">
+                  <button onClick={()=>{setpage("figma")}} 
+                  // Onclicking to frontEnd quiz it should redirect 
+                  className="sub-btn">
                     Get Started
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +134,10 @@ export default function HomePage({ setpage }) {
                 <p className="sub-name">Skeleton Design</p>
                 <div className="img-btn">
                   <img src="box-img-1.png" style={{ cursor: "pointer" }} />
-                  <button onClick={()=>{setpage("html")}} className="sub-btn">
+                  
+                  <button onClick={()=>{setpage("html")}} 
+                  //Onclicking to frontEnd quiz it should redirect 
+                  className="sub-btn">
                     Get Started
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +158,9 @@ export default function HomePage({ setpage }) {
                 <p className="sub-name">Beauty Of Web</p>
                 <div className="img-btn">
                   <img src="box-img-2.png" style={{ cursor: "pointer" }} />
-                  <button onClick={()=>{setpage("Css")}} className="sub-btn ">
+                  <button onClick={()=>{setpage("Css")}}
+                  // Onclicking to frontEnd quiz it should redirect 
+                  className="sub-btn ">
                     Get Started
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

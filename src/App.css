@@ -5,6 +5,7 @@
 .Home{
     height:"120%"
 }
+/* Navbar Property */
 .navbar{
     background-color:#853EF3;
     display:flex;
@@ -60,10 +61,8 @@
     width: 70px;
     height: 25px;
 }
-/* .student-Svg{
-    width: 22px;
-    height: 18px;
-} */
+/* Paragraph property */
+
 .main-para{
     margin: 4% 0 0 4.3%;
 }
@@ -85,6 +84,8 @@
     justify-content: space-between;
     padding: 20px;
 }
+
+/* Quiz Modules Div Styling  */
 .sub-btn{
     display:flex;
     width:148px;
@@ -140,6 +141,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
+/* div hover effect  */
 .common:hover{
     border:1px solid #75BC9B;
 }
@@ -155,7 +157,7 @@ button:hover{
     background: "#6A2CAB"
 }
 
-/* prac */
+/* Hamburger Design */
 .your-container {
     position: relative;
     display: flex;
@@ -186,6 +188,9 @@ button:hover{
     transition: 0.4s;
   }
   
+
+  /* Responsive Designing */
+
   @media (max-width: 768px) {
     .hamburger-menu {
         display: block;
@@ -213,6 +218,8 @@ button:hover{
       display: block;
     }
   }
+
+  /* Responsive Designing */
 
 @media screen and (max-width:400px) {
     .nav-logo{

@@ -4,27 +4,23 @@ import questions from "./questions";
 import HomePage from "./components/HomePage";
 import AnswerBox from "./components/AnswerBox";
 import QuestionPage from "./components/QuestionPage";
- import Figma from "./components/Figma";
+import Figma from "./components/Figma";
 import Design from "./Design";
 import HtmlQues from "./HtmlQues";
 import Html from "./components/Html";
 import Cssquiz from "./Cssquiz";
 import Css from "./components/Css";
 
-
-
-
-
-
 function App() {
-  const [page, setPage] = useState("main"); // Fix: Corrected the state function name
+  const [page, setPage] = useState("main"); 
 
   return (
     <div>
+      {/* checking the value by passing props and displaying that page according to this value */}
       {
           page === "main" ? 
               <HomePage setpage={setPage} /> 
-           : page === "questionpage" ? 
+          : page === "questionpage" ? 
               <QuestionPage questions={questions} setPage={setPage} />
           : page == "result" ? 
               <AnswerBox setPage={setPage}/>
@@ -36,9 +32,6 @@ function App() {
               <Css Cssquiz={Cssquiz} setPage={setPage} /> : " "
       }
     </div>
-
-
-
   )
 }
 

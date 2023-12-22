@@ -4,15 +4,18 @@ import { AppContextx } from "../UseContext/Parentcontext";
 export default function AnswerBox({ setPage }) {
   const { correct, isCorrect } = useContext(AppContextx);
   const { light, isLight } = useContext(AppContextx);
+
+  // user click on play button then page refreshes
   function quizPage() {
     window.location.href=window.location.href
   }
+  // changing user correct answers in percentage
   var accuracy = Math.floor((correct / 10) * 100);
+// changing the background color 
   function color() {
-    console.log(light);
     isLight(!light);
-    console.log(light);
   }
+  // Return the statement Based on user result
   var textContent = "";
   if (accuracy <= 30) {
     textContent = "Skills Issue💩";
@@ -25,6 +28,7 @@ export default function AnswerBox({ setPage }) {
   }
   return (
     <main>
+      {/* using conditional Rendering to change the color */}
       <div className={light ? "body-questionPage" : "body-questionPage2"}>
         <div
           className="Result-Div"
@@ -51,9 +55,11 @@ export default function AnswerBox({ setPage }) {
           <img className="Answer-img2" src="Answebox-emoji2.png" />
           <img className="Answer-img3" src="Answebox-emoji3.png" />
           <h2 className="Wiining-quoats">{textContent}</h2>
+          {/* returning the text according to user performance in quiz */}
           <h2 className="Answer-quoats">
             You Have marked {correct} Correct answer - {accuracy}% Accuracy
           </h2>
+          {/* onclicking play button, redirected to the home page */}
           <button
             onClick={quizPage}
             className="Play-Again"

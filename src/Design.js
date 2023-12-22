@@ -1,3 +1,4 @@
+// Design Quiz Questions
 const Design = [
     {
       text: "What is Figma used for?",

@@ -1,3 +1,5 @@
+
+/* Styling Background of the div */
 .Result-Div{
     width: 77%;
     height: 454px;
@@ -10,6 +12,7 @@
     top: 17%;
     
 }
+/* styling Button */
 .btn-bg{
     color: white;
     padding: 10px 40px;
@@ -23,6 +26,7 @@
     margin-top: 4%;
     padding-right: 5%;
 }
+/* Inserting image and styling it */
 .Answer-img1{
     position: absolute;
     top: 0;
@@ -40,6 +44,7 @@ height: 206px;
 flex-shrink: 0;
     bottom: 0;
 }
+/* Text Styling */
 .Answer-quoats{
     display: flex;
     justify-content: center;
@@ -52,6 +57,7 @@ flex-shrink: 0;
     text-decoration: underline;
     padding: 0 23% 0 24%;
 }
+/* Play Again button styling */
 .Play-Again{
     position: absolute;
     left: 42.7%;
@@ -61,6 +67,7 @@ flex-shrink: 0;
     border-radius: 13px;
     font-size: 16px;
 }
+/* Responsive Designing */
 @media screen and (max-width:400px) {
     .btn-bg {
         padding: 7px 18px;

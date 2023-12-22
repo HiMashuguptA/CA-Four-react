@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { AppContextx } from "../UseContext/Parentcontext";
 
 export default function Css({ Cssquiz, setPage }) {
+// bringing state values from AppContextx
   const { correct, isCorrect } = useContext(AppContextx);
   const [count, setCount] = useState(0);
   const { light, isLight } = useContext(AppContextx);
@@ -9,29 +10,35 @@ export default function Css({ Cssquiz, setPage }) {
   
   const { text, options } = Cssquiz[count];
   
+//   function given to make question next on every click and redirected to the Result page
   function next(para) {
     if (count === Cssquiz.length - 1) {
       setPage("result");
     } else {
       setCount(count + 1);
     }
+    // checking answers, if options is true then correct will be increased
     if (para && para.isCorrect == true) {
       isCorrect(correct + 1);
-      console.log(correct);
     }
   }
+//   changing the color
   function color() {
     isLight(!light);
   }
+//   giving highlights 
   function highlights() {
     isHighlight(false);
   }
+//   removing highlights, making to default
   function removehighlights() {
     isHighlight(true);
   }
   return (
     <main>
+        {/* using conditional rendering to change the background color */}
       <div className={light ? "body-questionPage" : "body-questionPage2"}>
+        {/* chnaging highlights based on user click on button */}
         <div className={Highlight ? "Question-div" : "Question-div2"}>
           <div className="Ques-section">
             <button
@@ -47,6 +54,7 @@ export default function Css({ Cssquiz, setPage }) {
           <div
             className="ques-div-2"
           >
+            {/* change the font color of the Quiz */}
             <h2
               className="Ques-text"
               style={{ color: `${Highlight ? "black" : "white"}` }}
@@ -54,7 +62,7 @@ export default function Css({ Cssquiz, setPage }) {
               <span
               className="ques-text"
               >
-                Q{count}.
+                Q{count+1}.
               </span>
               {text}
             </h2>
@@ -64,10 +72,12 @@ export default function Css({ Cssquiz, setPage }) {
           >
             <button
               onClick={() => {
+                // Targets The index of options 
                 next(options[0]);
               }}
               className="Question-btn"
             >
+                {/* Shows options */}
               A. {options[0].text}
             </button>
             <button
@@ -98,6 +108,7 @@ export default function Css({ Cssquiz, setPage }) {
           <div
           className="highlights-button-div"
           >
+            {/* On clicking Hihlights the button */}
             <button
               onClick={highlights}
               className="highlights-btns"
@@ -108,6 +119,7 @@ export default function Css({ Cssquiz, setPage }) {
               Highlights
             </button>
             <button
+            //Remove the highlights
               onClick={removehighlights}
               className="highlights-btns"
               style={{
